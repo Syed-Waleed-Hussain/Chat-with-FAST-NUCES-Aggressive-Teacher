@@ -347,35 +347,23 @@ if "total_tokens_used" not in st.session_state:
 if "selected_quick_prompt" not in st.session_state:
     st.session_state.selected_quick_prompt = None
 
-env_api_key = os.getenv("GROQ_API_KEY", "")
-if not env_api_key and hasattr(st, "secrets"):
+groq_api_key = os.getenv("GROQ_API_KEY", "")
+if not groq_api_key and hasattr(st, "secrets"):
     try:
-        env_api_key = str(st.secrets.get("GROQ_API_KEY", ""))
+        groq_api_key = str(st.secrets.get("GROQ_API_KEY", ""))
     except Exception:
         pass
+groq_api_key = groq_api_key.strip()
 
 with st.sidebar:
     st.markdown('<div class="sidebar-title">🤬 Faculty Office (Strict AI)</div>', unsafe_allow_html=True)
     st.caption("FAST-NUCES Department of Strict Evaluation")
     st.markdown("---")
 
-    api_key_status = "✅ Connected via Environment/Secrets" if env_api_key else "⚠️ Key Required"
-    
-    with st.expander("🔑 Groq API Credentials", expanded=not bool(env_api_key)):
-        user_api_key = st.text_input(
-            "Enter Groq API Key",
-            value=env_api_key,
-            type="password",
-            help="Get your free key at https://console.groq.com/keys"
-        )
-        if env_api_key:
-            st.success(api_key_status)
-        elif user_api_key:
-            st.info("Using manually entered API Key")
-        else:
-            st.warning("Please provide a valid Groq API Key to chat.")
-
-    groq_api_key = (user_api_key or env_api_key).strip()
+    if groq_api_key:
+        st.markdown('<div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 8px; padding: 6px 12px; font-size: 0.8rem; color: #86efac; margin-bottom: 12px;">🔒 Server API Connected</div>', unsafe_allow_html=True)
+    else:
+        st.error("⚠️ GROQ_API_KEY is not configured in .env or Streamlit Secrets.")
 
     available_models = list(BASE_MODELS)
     if groq_api_key:
