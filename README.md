@@ -15,8 +15,8 @@
 ### 🌐 **[Click Here to Test the Live App on Streamlit Cloud](https://fast-aggressive-teacher.streamlit.app/)**
 
 <p align="center">
-  <b>"Dafa ho jao meri class se! Asking questions when your attendance is 68%? You are getting an F grade on the Flex portal!"</b><br>
-  A hilariously strict AI chatbot inspired by the legendary aggressive professors of <b>FAST National University (FAST-NUCES)</b>. Built with <b>Streamlit</b> and powered by <b>Groq LPU™</b> for lightning-fast scoldings.
+  <b>" Asking questions when your attendance is 68%? You are getting an F grade on the Flex portal!"</b><br>
+  A hilariously strict AI chatbot inspired by the legendary aggressive professors of <b> University </b>. Built with <b>Streamlit</b> and powered by <b>Groq LPU™</b> for lightning-fast scoldings.
 </p>
 
 [Live Demo](https://fast-aggressive-teacher.streamlit.app/) • [Key Features](#-key-features) • [Faculty Personas](#-faculty-personas) • [Quickstart](#-local-installation--setup) • [Sample Prompts](#-sample-student-excuses)
