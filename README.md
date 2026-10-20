@@ -3,18 +3,23 @@
 # 🤬 FAST-NUCES Strict Teacher AI
 ### *The Most Feared, Aggressive & Sarcastic Academic Instructor on Groq LPU™*
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-fast--aggressive--teacher.streamlit.app-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white)](https://fast-aggressive-teacher.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fast-aggressive-teacher.streamlit.app/)
 [![Groq Powered](https://img.shields.io/badge/Inference-Groq%20LPU™-f55036?style=for-the-badge&logo=fastapi&logoColor=white)](https://groq.com)
 [![FAST NUCES](https://img.shields.io/badge/FAST--NUCES-Flex%20Portal%20Approved-dc2626?style=for-the-badge)](https://nu.edu.pk)
 [![UI/UX Design](https://img.shields.io/badge/Design-Crimson%20Glassmorphism-991b1b?style=for-the-badge&logo=figma&logoColor=white)](https://github.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+<br/>
+
+### 🌐 **[Click Here to Test the Live App on Streamlit Cloud](https://fast-aggressive-teacher.streamlit.app/)**
 
 <p align="center">
   <b>"Dafa ho jao meri class se! Asking questions when your attendance is 68%? You are getting an F grade on the Flex portal!"</b><br>
   A hilariously strict AI chatbot inspired by the legendary aggressive professors of <b>FAST National University (FAST-NUCES)</b>. Built with <b>Streamlit</b> and powered by <b>Groq LPU™</b> for lightning-fast scoldings.
 </p>
 
-[Key Features](#-key-features) • [Faculty Personas](#-faculty-personas) • [Quickstart](#-local-installation--setup) • [Deploy to Streamlit](#-deployment-to-streamlit-cloud) • [Sample Prompts](#-sample-student-excuses)
+[Live Demo](https://fast-aggressive-teacher.streamlit.app/) • [Key Features](#-key-features) • [Faculty Personas](#-faculty-personas) • [Quickstart](#-local-installation--setup) • [Sample Prompts](#-sample-student-excuses)
 
 ---
 
@@ -22,13 +27,15 @@
 
 ## 🌟 Key Features
 
+- 🌐 **Live Web Deployment:** Available 24/7 on Streamlit Cloud at [fast-aggressive-teacher.streamlit.app](https://fast-aggressive-teacher.streamlit.app/).
 - 🤬 **Pure FAST-NUCES Campus Trauma:** Never lets students forget their < 80% attendance, unannounced quizzes, 11:59 PM deadlines, and zero marks on Turnitin plagiarism.
 - ⚡ **Sub-Second Rage Streaming (Groq LPU™):** Streams furious scoldings and technically accurate answers at over ~300–800+ tokens/second.
 - 🎨 **Award-Winning Crimson Glassmorphic UI:** Sleek obsidian & crimson theme with pulsing shortage warnings, Google *Plus Jakarta Sans* typography, and modern responsive micro-interactions.
+- 📱 **100% Mobile Responsive:** Optimized with custom CSS media queries for smartphones and tablets.
 - 🧠 **Multi-Model Support & Custom ID:** Supports `Qwen 3.8 27B`, `GPT-OSS 120B/20B`, `Llama 3.3 70B`, `Llama 3.1 8B/70B`, `DeepSeek R1 Distill`, or any custom Groq model ID.
 - 🎭 **Multiple Strict Faculty Personas:** Switch between Course Instructor, Head of FYP Committee, Lab Instructor, or Attendance Incharge.
+- 🔒 **Secure Backend Credentials:** Zero client-side API key exposure; securely authenticated via server environment or Streamlit Secrets.
 - 📥 **Disciplinary Charge Sheet Export:** Download entire chat hearings in **Markdown (`.md`)** or **JSON (`.json`)**.
-- ☁️ **Cloud Ready:** Fully supports `.env` locally and Streamlit Cloud `st.secrets` for 1-click free deployment.
 
 ---
 
@@ -54,8 +61,8 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Syed-Waleed-Hussain/Hero-and-Villain-Predictor-for-Marvel-and-DC-Characters-Using-Neural-Networks.git
-cd "Week 6"
+git clone https://github.com/Syed-Waleed-Hussain/Chat-with-FAST-NUCES-Aggressive-Teacher.git
+cd Chat-with-FAST-NUCES-Aggressive-Teacher
 ```
 
 ### 2. Install Dependencies
@@ -77,37 +84,30 @@ Open `http://localhost:8501` to face Sir!
 
 ---
 
-## ☁️ Deployment to Streamlit Cloud
+## ☁️ Deployment Guide (Streamlit Cloud)
 
-### Step 1: Commit and Push Code to GitHub
-```bash
-git add "Week 6"
-git commit -m "feat: Add FAST NUCES Strict Teacher AI"
-git push origin main
-```
-
-### Step 2: Deploy on Streamlit Community Cloud
-1. Go to **[share.streamlit.io](https://share.streamlit.io/)** and sign in with GitHub.
-2. Click **New app**.
-3. Select your repository: `Syed-Waleed-Hussain/Hero-and-Villain-Predictor-for-Marvel-and-DC-Characters-Using-Neural-Networks`
-4. Set **Branch** to `main` and **Main file path** to `Week 6/app.py`.
-5. Under **Advanced settings ➡️ Secrets**, paste:
+1. Push your repository to GitHub.
+2. Go to **[share.streamlit.io](https://share.streamlit.io/)** and click **New app**.
+3. Choose repository: `Syed-Waleed-Hussain/Chat-with-FAST-NUCES-Aggressive-Teacher`
+4. Set Main file path: `app.py`
+5. In **Advanced Settings ➡️ Secrets**, add:
    ```toml
-   GROQ_API_KEY = "gsk_your_actual_groq_api_key_here"
+   GROQ_API_KEY = "gsk_your_groq_api_key_here"
    ```
 6. Click **Deploy!** 🚀
+
+Live App: **[https://fast-aggressive-teacher.streamlit.app/](https://fast-aggressive-teacher.streamlit.app/)**
 
 ---
 
 ## 📁 Project Structure
 
 ```
-Week 6/
 ├── .streamlit/
 │   └── config.toml       # Streamlit dark theme settings
 ├── app.py                # FAST-NUCES Strict Teacher Chatbot with Glassmorphism UI
 ├── requirements.txt      # Streamlit, Groq, Dotenv
-├── .env                  # Secret API key (local only)
+├── .env                  # Secret API key (local only, git-ignored)
 ├── .env.example          # Environment template
 ├── .gitignore            # Git rules
 └── README.md             # Project documentation
