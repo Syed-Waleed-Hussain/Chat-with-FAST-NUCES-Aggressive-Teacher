@@ -49,7 +49,6 @@ html, body, [class*="css"] {
         radial-gradient(at 50% 90%, rgba(185, 28, 28, 0.15) 0px, transparent 50%);
     background-attachment: fixed;
 }
-
 header[data-testid="stHeader"] {
     background: transparent !important;
 }
@@ -379,7 +378,6 @@ with st.sidebar:
                 available_models = merged
         except Exception:
             pass
-
     st.markdown("#### 🧠 Teacher Inference Engine")
     model_choice = st.selectbox(
         "Active Model",
